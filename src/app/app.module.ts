@@ -9,6 +9,7 @@ import { ContentListComponent } from './content-list/content-list.component';
 import { FilterPipe } from './filter.pipe';
 import { DefaultTypePipe } from './default-type.pipe';
 import { AddComicComponent } from './add-comic/add-comic.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AddComicComponent } from './add-comic/add-comic.component';
     ContentListComponent,
     FilterPipe,
     DefaultTypePipe,
-    AddComicComponent
+    AddComicComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

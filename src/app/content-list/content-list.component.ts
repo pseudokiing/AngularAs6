@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Content } from '../content-card/content-helper';
 import {ContentService} from '../services/content.service';
-import { comicBookList } from '../contentDB';
+import { comicBookList } from '../contentDb';
 
 @Component({
   selector: 'app-content-list',

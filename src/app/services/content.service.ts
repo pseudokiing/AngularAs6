@@ -16,7 +16,7 @@ export class ContentService {
     return comicBookList;
   }
   getContentObs() : Observable<Content[]>{
-    this.messageService.add('HeroeService: fetched heroes');
+    this.messageService.add('Heroe Service: all heroes are present and accounted for');
     return of(comicBookList);
   }
 

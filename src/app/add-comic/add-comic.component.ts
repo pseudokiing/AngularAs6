@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Content } from '../content-card/content-helper';
 import { SelectControlValueAccessor } from '@angular/forms';
+import { MessageService } from '../services/message.service';
 
 @Component({
   selector: 'app-add-comic',
@@ -20,15 +21,13 @@ export class AddComicComponent implements OnInit
     bodyBinding: any;
     genreBinding: any;
     imgBinding: any;
-  constructor() { }
+
+  constructor(private addComicMessage: MessageService) { }
 
   ngOnInit() {
     this.currentId = this.startingId;
     //console.log(this.currentId);
   }
-
-  
-  
   addComic(alias: string, name: string, body: string, genre: string, imgUrl: string) 
   {
     let addNewComic = new Promise((success, fail) =>
@@ -72,6 +71,7 @@ export class AddComicComponent implements OnInit
         let title = this.newComicItem.alias;
         this.err = ``;
         this.success = `The ${title} comic was added succesfully `;
+        this.addComicMessage.add(`The ${title} comic was added succesfully`);
       }).catch(r => { 
         this.success = ``;
         this.err = r;

@@ -24,7 +24,7 @@ export class AddComicComponent implements OnInit
 
   ngOnInit() {
     this.currentId = this.startingId;
-    console.log(this.currentId);
+    //console.log(this.currentId);
   }
 
   
